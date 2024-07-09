@@ -7,6 +7,7 @@
 
 conda activate aimo
 echo "START TIME: $(date)"
+
 if [ -z "$WANDB_RUN_ID" ]; then
     export WANDB_RUN_ID=$(tr -dc 'a-z0-9' </dev/urandom | head -c 8)
 fi
