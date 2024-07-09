@@ -27,7 +27,7 @@ gradient_accumulation_steps: 1
 gradient_checkpointing: true
 gradient_checkpointing_kwargs:
   use_reentrant: False
-hub_model_id: AI-MO/deepseek-math-7b-sft
+hub_model_id: <ORG>/numina-math-7b-cot
 hub_private_repo: true
 hub_strategy: every_save
 learning_rate: 2.0e-05
@@ -37,9 +37,9 @@ logging_strategy: steps
 lr_scheduler_type: cosine
 max_steps: -1
 num_train_epochs: 3
-output_dir: data/deepseek-math-7b-sft-aimo-cot
-hub_model_revision: aimo-cot
-run_name: deepseek-math-7b-sft-aimo-cot
+output_dir: data/numina-math-7b-cot
+hub_model_revision: main
+run_name: numina-math-7b-cot
 overwrite_output_dir: true
 per_device_eval_batch_size: 8
 per_device_train_batch_size: 4
@@ -52,7 +52,7 @@ save_strategy: "no"
 save_total_limit: 1
 save_steps: 0.1
 seed: 42
-wandb_run_group: deepseek-math-7b-sft # Name of the W&B group to collect all runs of this experiment under. Use double-digits for {idx}, starting from 00.
+wandb_run_group: numina-math-7b-cot # Name of the W&B group to collect all runs of this experiment under. Use double-digits for {idx}, starting from 00.
 wandb_run_id: null # Set this to a globally unique string if you want a descriptive name of your run
 wandb_tags: # Use tags to filter runs on WandB
 - sft
