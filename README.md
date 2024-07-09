@@ -36,7 +36,6 @@ conda create -n aimo python=3.10 && conda activate aimo
 pip install -R requirements.txt
 ```
 
-
 Training is conducted in two stages:
 - **Stage 1** Chain of Thought (CoT) training on math problems and text solutions.
 - **Stage 2** Tool Integrated Reasoning (TIR) training on math problems and code solutions.
