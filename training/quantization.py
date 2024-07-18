@@ -17,9 +17,9 @@ Script to quantize a Transformers model with AutoGPTQ and push it to the Hub
 
 Usage:
 
-python scripts/deployment/quantize_model_gptq.py \
-    --model_id <ORG>/deepseek-math-7b-sft \
-    --revision aimo-tora
+python training/quantization.py \
+    --model_id AI-MO/NuminaMath-7B-TIR \
+    --calibration_dataset AI-MO/NuminaMath-TIR
 """
 import argparse
 import shutil
