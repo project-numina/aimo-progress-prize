@@ -15,7 +15,7 @@
 
 from typing import List, Optional, Union
 
-from datasets import DatasetDict, concatenate_datasets, load_dataset
+from datasets import DatasetDict, concatenate_datasets, load_dataset, load_from_disk
 
 from ..configs import DataConfig
 
@@ -107,21 +107,27 @@ def mix_datasets(dataset_mixer: dict, splits: Optional[List[str]] = None, shuffl
         fracs.append(frac)
         for split in splits:
             if "train" in split:
-                train_ds = load_dataset(
-                    ds,
-                    split=split,
-                    revision=revision,
-                )
+                if "data/" in ds:
+                    train_ds = load_from_disk(ds)[split]
+                else:
+                    train_ds = load_dataset(
+                        ds,
+                        split=split,
+                        revision=revision,
+                    )
                 train_ds = train_ds.remove_columns(
                     [col for col in train_ds.column_names if col not in COLUMNS_TO_KEEP]
                 )
                 raw_train_datasets.append(train_ds)
             elif "test" in split:
-                val_ds = load_dataset(
-                    ds,
-                    split=split,
-                    revision=revision,
-                )
+                if "data/" in ds:
+                    val_ds = load_from_disk(ds)[split]
+                else:
+                    val_ds = load_dataset(
+                        ds,
+                        split=split,
+                        revision=revision,
+                    )
                 val_ds = val_ds.remove_columns([col for col in val_ds.column_names if col not in COLUMNS_TO_KEEP])
                 raw_val_datasets.append(val_ds)
             else:
