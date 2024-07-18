@@ -83,7 +83,7 @@ Training is conducted in two stages, following the [MuMath-Code recipe](https://
 - **Stage 2** Tool Integrated Reasoning (TIR) training on math problems and code solutions.
 
 <div align="center">
-  <img src="images/recipe.png" width="30%" alt="AIMO training recipe" />
+  <img src="images/recipe.png" width="40%" alt="AIMO training recipe" />
 </div>
 
 ## Datasets
