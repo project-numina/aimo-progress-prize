@@ -21,7 +21,6 @@ Adapted from huggingface/transformers: https://github.com/huggingface/transforme
 import logging
 import math
 import random
-import shutil
 import sys
 
 import datasets
@@ -29,8 +28,8 @@ import torch
 import transformers
 import wandb
 from accelerate import Accelerator
-from numina.configs import DataConfig, ModelConfig, SFTConfig
-from numina.utils import (
+from aimo.configs import DataConfig, ModelConfig, SFTConfig
+from aimo.utils import (
     H4ArgumentParser,
     apply_chat_template,
     check_hub_revision_exists,
@@ -39,7 +38,6 @@ from numina.utils import (
     get_tokenizer,
     hf_login,
     init_wandb_training,
-    push_to_hub_revision,
 )
 from transformers import set_seed
 from trl import SFTTrainer
@@ -201,28 +199,23 @@ def main():
     trainer.save_model(sft_config.output_dir)
     logger.info(f"Model saved to {sft_config.output_dir}")
 
+    kwargs = {
+        "finetuned_from": model_config.model_name_or_path,
+        "dataset": list(data_config.dataset_mixer.keys()),
+        "dataset_tags": list(data_config.dataset_mixer.keys()),
+        "tags": ["aimo"],
+    }
+
     # Save everything else on main process
     if accelerator.is_main_process:
-        kwargs = {
-            "finetuned_from": model_config.model_name_or_path,
-            "dataset": list(data_config.dataset_mixer.keys()),
-            "dataset_tags": list(data_config.dataset_mixer.keys()),
-            "tags": ["alignment-handbook"],
-        }
         trainer.create_model_card(**kwargs)
         # Restore k,v cache for fast inference
         trainer.model.config.use_cache = True
         trainer.model.config.save_pretrained(sft_config.output_dir)
 
-        if sft_config.push_to_hub_revision is True:
-            logger.info("Pushing to hub...")
-            is_model_on_hub = push_to_hub_revision(sft_config)
-            # Delete local checkpoint if model on Hub
-            if is_model_on_hub is True:
-                shutil.rmtree(sft_config.output_dir)
-
-    accelerator.wait_for_everyone()
-    wandb.finish()
+    if sft_config.push_to_hub is True:
+        logger.info("Pushing to hub...")
+        trainer.push_to_hub(**kwargs)
 
 
 if __name__ == "__main__":
