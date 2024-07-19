@@ -163,11 +163,11 @@ UBUNTU_CODENAME=focal
 ```
 @misc{numina_math_datasets,
   author = {Jia LI, Edward Beeching, Lewis Tunstall, Ben Lipkin, Roman Soletskyi, Shengyi Costa Huang, Kashif Rasul, Longhui Yu, Albert Jiang, Ziju Shen, Zihan Qin, Bin Dong, Li Zhou, Yann Fleureau, Guillaume Lample, and Stanislas Polu},
-  title = {NuminaMath 7B TIR},
+  title = {NuminaMath},
   year = {2024},
-  publisher = {Numina & Hugging Face},
-  journal = {Hugging Face repository},
-  howpublished = {\url{[https://huggingface.co/AI-MO/NuminaMath-7B-TIR](https://github.com/project-numina/aimo-progress-prize/blob/main/report/numina_dataset.pdf)}}
+  publisher = {Numina},
+  journal = {GitHub repository},
+  howpublished = {\url{[https://github.com/project-numina/aimo-progress-prize](https://github.com/project-numina/aimo-progress-prize/blob/main/report/numina_dataset.pdf)}}
 }
 ```
 
