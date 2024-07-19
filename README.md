@@ -8,9 +8,9 @@
 </div>
 
 <p align="center">
-    🌐 <a href="https://www.projectnumina.ai/">Website</a>&nbsp&nbsp
+    🌐 <a href="https://www.projectnumina.ai/">Website</a>&nbsp&nbsp | 🗂️ <a href="https://huggingface.co/collections/AI-MO/numinamath-6697df380293bcfdbc1d978c">Datasets</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://github.com/project-numina/aimo-progress-prize/blob/main/report/numina_dataset.pdf">Dataset Technical Report</a> &nbsp&nbsp 
 <br>
-        🤗 <a href="https://huggingface.co/AI-MO">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="https://huggingface.co/blog/winning-aimo-progress-prize">Blog post</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs">Dataset Technical Report</a> &nbsp&nbsp ｜ &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/AI-MO/math-olympiad-solver">Demo</a> 
+        🤗 <a href="https://huggingface.co/AI-MO">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="https://huggingface.co/blog/winning-aimo-progress-prize">Blog post</a>&nbsp&nbsp |  &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/AI-MO/math-olympiad-solver">Demo</a> 
 </p>
 <br><br>
 
