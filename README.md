@@ -159,6 +159,14 @@ UBUNTU_CODENAME=focal
 
 ### GPU
 
+One node of 8 x H100s, each with 80GB VRAM and 96 CPUs with 1TB RAM.
+
+## Software (Python packages are detailed separately in `requirements.txt`):
+
+* Python 3.10.14
+* CUDA 12.2
+* Nvidia drivers v.535.104.12
+
 ## Citation
 ```
 @misc{numina_math_datasets,
@@ -170,11 +178,3 @@ UBUNTU_CODENAME=focal
   howpublished = {\url{[https://github.com/project-numina/aimo-progress-prize](https://github.com/project-numina/aimo-progress-prize/blob/main/report/numina_dataset.pdf)}}
 }
 ```
-
-One node of 8 x H100s, each with 80GB VRAM and 96 CPUs with 1TB RAM.
-
-## Software (Python packages are detailed separately in `requirements.txt`):
-
-* Python 3.10.14
-* CUDA 12.2
-* Nvidia drivers v.535.104.12
