@@ -8,7 +8,7 @@
 </div>
 
 <p align="center">
-    [small logo] <a href="https://www.projectnumina.ai/">Website</a>&nbsp&nbsp
+    🌐 <a href="https://www.projectnumina.ai/">Website</a>&nbsp&nbsp
 <br>
         🤗 <a href="https://huggingface.co/AI-MO">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="https://huggingface.co/blog/winning-aimo-progress-prize">Blog post</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href="https://arxiv.org/abs">Dataset Technical Report</a> &nbsp&nbsp ｜ &nbsp&nbsp🖥️ <a href="https://huggingface.co/spaces/AI-MO/math-olympiad-solver">Demo</a> 
 </p>
