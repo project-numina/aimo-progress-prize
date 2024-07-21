@@ -97,7 +97,7 @@ We used two datasets to fine-tune our model:
 
 As described above, training the model proceeds in two steps:
 
-1. Apply SFT to fine-tune [DeepSeekMath-Base 7B](https://huggingface.co/deepseek-ai/deepseek-math-7b-base) on the `[NuminaMath-CoT](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT)` dataset. The result is an SFT model like [`NuminaMath-7B-CoT`](https://huggingface.co/AI-MO/NuminaMath-7B-CoT).
+1. Apply SFT to fine-tune [DeepSeekMath-Base 7B](https://huggingface.co/deepseek-ai/deepseek-math-7b-base) on the [`NuminaMath-CoT`](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT) dataset. The result is an SFT model like [`NuminaMath-7B-CoT`](https://huggingface.co/AI-MO/NuminaMath-7B-CoT).
 2. Fine-tune the SFT model from Stage 1 to learn tool-integrated reasoning on the [`NuminaMath-TIR`](https://huggingface.co/datasets/AI-MO/NuminaMath-TIR) dataset. The result is a "reasoning agent" like [`NuminaMath-7B-TIR`](https://huggingface.co/AI-MO/NuminaMath-7B-TIR).
   
 See below for commands to train these models using DeepSpeed ZeRO-3. Note you will require 8 GPUs with 80GB of VRAM to train the full model with our settings.
