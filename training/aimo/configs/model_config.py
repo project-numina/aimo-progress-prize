@@ -29,7 +29,7 @@ class ModelConfig:
 
     base_model_revision: Optional[str] = field(
         default=None,
-        metadata={"help": ("The base model checkpoint for weights initialization with PEFT adatpers.")},
+        metadata={"help": ("The base model checkpoint for weights initialization with PEFT adapters.")},
     )
     model_name_or_path: Optional[str] = field(
         default=None,
